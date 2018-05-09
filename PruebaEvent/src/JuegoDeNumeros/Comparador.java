@@ -7,7 +7,6 @@ package JuegoDeNumeros;
 
 import JuegoDeNumeros.Pantallas.*;
 
-
 /**
  *
  * @author SISTEMAS
@@ -15,17 +14,63 @@ import JuegoDeNumeros.Pantallas.*;
 public class Comparador {
     
     
-  
-    Felicitaciones feli = new Felicitaciones();
+  private static String mensaje;
+  private static int Intentos;
+
+    public static int getIntentos() {
+        return Intentos;
+    }
+
+    public static void setIntentos(int Intentos) {
+        Comparador.Intentos = Intentos;
+    }
+
+ 
+    public static String getMensaje() {
+        return mensaje;
+    }
+
+   
+     public void Traspaso (String texto){
+   
+         
+        int valor;
+    
+        try {
+            
+       valor = Integer.parseInt(texto);
+       
+   if (valor>=0 && valor<=100){       
+       mensaje = Comparar(valor);
+       Mensajes mens = new Mensajes();
+       mens.setVisible(true);
+   }
+   
+   else{ 
+       mensaje="tiene que ingresar numero de 0 a 100";
+       Mensajes mens = new Mensajes();
+       mens.setVisible(true);}       
+   
+}
+        
+catch (NumberFormatException e) {
+   mensaje="Solo puede ingresar numeros";
+   Mensajes mens = new Mensajes();
+     mens.setVisible(true);
+     
+  }         
+    }
     
     public String Comparar (int hum){
-           Main.Intentos = Main.Intentos+1;
+           Intentos = Intentos+1;
          System.out.println("comparando");
     if  (Main.numComputadora>hum)return"mmm intenta con uno mas grande";
-     else if (Main.numComputadora<hum) return "te pasaste machote";
+     else if (Main.numComputadora<hum) return "te pasaste machote, es mas chico";
                
-        return "Ganaste fiera,tifon,torbellino,maquina,crack,numero 1";
+        return "Ganaste fiera,tifon,torbellino,maquina,crack,numero 1"+"" + "Ganaste en tu intento" +""+ Intentos;
               
 }
 
+    
+    
 }    
