@@ -5,24 +5,26 @@
  */
 package JuegoDeNumeros;
 
-import JuegoDeNumeros.Pantallas.Juego;
+import JuegoDeNumeros.Pantallas.Principal;
 
 /**
  *
  * @author SISTEMAS
  */
 public class Main {
-    
-    public static int numComputadora = (int) (Math.random() * 100 + 1); 
+
+    public static int numComputadora = (int) (Math.random() * 100 + 1);
+
     /**
      * @param args the command line arguments
      */
+
+
     public static void main(String[] args) {
         // TODO code application logic here
+
         
-Juego Principal = new Juego(); 
-Principal.setVisible(true); 
-     
-               
-    }     
+        Principal principal = new Principal();
+        principal.setVisible(true);
+    }
 }
