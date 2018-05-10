@@ -6,6 +6,9 @@
 
 package JuegoDeNumeros.Pantallas;
 
+import JuegoDeNumeros.ComparadorCompuAdivina;
+import JuegoDeNumeros.Main;
+
 /**
  *
  * @author SISTEMAS
@@ -70,14 +73,19 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CompuAdivinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompuAdivinaActionPerformed
-       
-        Juego compuAdivina = new Juego();
-        compuAdivina.setVisible(true);
+        //llama a la pantalla para que adivine la persona
+        Compuadivina compuAdivin = new Compuadivina();
+        compuAdivin.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_CompuAdivinaActionPerformed
 
     private void PersonaAdivinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonaAdivinaActionPerformed
-        Compuadivina personaAdivina = new Compuadivina();
-        personaAdivina.setVisible(true);
+//llama a la pantalla para que adivine la computadora
+        Juego persAdivina = new Juego();
+        persAdivina.setVisible(true);
+        this.setVisible(false);
+        Main.reset();
     }//GEN-LAST:event_PersonaAdivinaActionPerformed
 
     /**

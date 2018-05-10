@@ -5,29 +5,48 @@
  */
 package JuegoDeNumeros;
 
+import JuegoDeNumeros.Pantallas.Compuadivina;
+
 /**
  *
  * @author SISTEMAS
  */
 public class ComparadorCompuAdivina {
-    
-    private static int numCompu = (int) (Math.random() * 100 + 1);
+    int varMax=100;
+    int varMenor = 0;
+    private int numCompu = (int) (Math.random() * 100 + 1);
 
-       
-    public static int getNumCompu() {
+    public int getNumCompu() {
         return numCompu;
     }
 
-    public static void setNumCompu(int numCompu) {
-        ComparadorCompuAdivina.numCompu = numCompu;
+    public void setNumCompu(int numCompu) {
+        this.numCompu = numCompu;
     }
-
+      
     public void mas (){
-        numCompu=(int) (Math.random()*(100+1));
+        
+        
         System.out.println(numCompu);
-    }
+       if (varMax >= numCompu){
+            varMax=numCompu;}
+         
+                numCompu=(int) (Math.random()*(varMax-varMenor)+(varMenor));
+         Compuadivina.txtCompu.append("asi que mas chico entonces es "+numCompu+"\n");
+          System.out.println("var mayor: "+varMax);
+        }
     
-    
-    
+    public void menos (){
+        
+              
+        if (varMenor <= numCompu){
+            varMenor=numCompu;}
+        
+               
+         numCompu=(int) (Math.random()*(varMax-varMenor)+(varMenor));
+         Compuadivina.txtCompu.append("asi que mas grande entonces es "+numCompu+"\n");
+         System.out.println("var menor: "+varMenor);
+        }
     
 }
+

@@ -47,11 +47,12 @@ public class Mensajes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
                         .addComponent(jButton1)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
@@ -60,9 +61,9 @@ public class Mensajes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jLabel2)
-                .addGap(43, 43, 43)
+                .addGap(33, 33, 33)
                 .addComponent(jButton1)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,6 +112,6 @@ this.setVisible(false);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
