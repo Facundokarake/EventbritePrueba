@@ -7,14 +7,24 @@ package JuegoDeNumeros;
 
 import JuegoDeNumeros.Pantallas.Compuadivina;
 
+
 /**
  *
  * @author SISTEMAS
  */
 public class ComparadorCompuAdivina {
-    int varMax=100;
-    int varMenor = 0;
+    private int varMax=100;
+    private int varMenor = 0;
+    private int IntentosCompu = 0;
     private int numCompu = (int) (Math.random() * 100 + 1);
+    
+    public int getIntentosCompu() {
+        return IntentosCompu;
+    }
+
+    public void setIntentosCompu(int IntentosCompu) {
+        this.IntentosCompu = IntentosCompu;
+    }
 
     public int getNumCompu() {
         return numCompu;
@@ -24,29 +34,29 @@ public class ComparadorCompuAdivina {
         this.numCompu = numCompu;
     }
       
-    public void mas (){
+    public void menos (){
         
         
-        System.out.println(numCompu);
+        
        if (varMax >= numCompu){
             varMax=numCompu;}
          
-                numCompu=(int) (Math.random()*(varMax-varMenor)+(varMenor));
+       numCompu=(int) (Math.random()*(varMax-varMenor)+(varMenor));
          Compuadivina.txtCompu.append("asi que mas chico entonces es "+numCompu+"\n");
-          System.out.println("var mayor: "+varMax);
+           IntentosCompu = IntentosCompu + 1;
         }
     
-    public void menos (){
+    public void mas (){
         
               
         if (varMenor <= numCompu){
             varMenor=numCompu;}
-        
-               
+                       
          numCompu=(int) (Math.random()*(varMax-varMenor)+(varMenor));
          Compuadivina.txtCompu.append("asi que mas grande entonces es "+numCompu+"\n");
-         System.out.println("var menor: "+varMenor);
+          IntentosCompu = IntentosCompu + 1;
         }
     
+ 
 }
 
