@@ -5,8 +5,6 @@
  */
 package JuegoDeNumeros.Pantallas;
 
-
-
 /**
  *
  * @author SISTEMAS
@@ -19,8 +17,8 @@ public class MensajesCompuAdivina extends javax.swing.JFrame {
     public MensajesCompuAdivina() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
-        }
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,7 +58,7 @@ public class MensajesCompuAdivina extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     this.setVisible(false);        
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

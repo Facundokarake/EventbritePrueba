@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package JuegoDeNumeros.Pantallas;
+
 import JuegoDeNumeros.*;
 import java.awt.Component;
+
 /**
  *
  * @author SISTEMAS
@@ -29,7 +31,6 @@ public class Compuadivina extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         Mas = new javax.swing.JButton();
         Menos = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -38,8 +39,6 @@ public class Compuadivina extends javax.swing.JFrame {
         txtCompu = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/81a7596f677c05990584afb0d275416e-gradiente-de-fondo-futurista.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Juego Adivinar");
@@ -110,38 +109,37 @@ public class Compuadivina extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     ComparadorCompuAdivina compu = new ComparadorCompuAdivina();
-      
+
     private void MasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MasActionPerformed
-            
-       compu.mas();
+
+        compu.mas();
     }//GEN-LAST:event_MasActionPerformed
 
     private void MenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenosActionPerformed
-       compu.menos();
+        compu.menos();
     }//GEN-LAST:event_MenosActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
         Principal principal = new Principal();
         principal.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       MensajesCompuAdivina Mens = new MensajesCompuAdivina();
-       Mens.setVisible(true);  
-       Mens.FelicitacionesCompu.setText("Siiii lo adivine a los "+compu.getIntentosCompu()+" intentos");
-     
+        MensajesCompuAdivina Mens = new MensajesCompuAdivina();
+        Mens.setVisible(true);
+        Mens.FelicitacionesCompu.setText("Siiii lo adivine a los " + compu.getIntentosCompu() + " intentos");
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-       txtCompu.setText("¿Tu numero es "+compu.getNumCompu()+"?\n"); 
-       compu = new ComparadorCompuAdivina();
-         
-         
+
+        txtCompu.setText("¿Tu numero es " + compu.getNumCompu() + "?\n");
+        compu = new ComparadorCompuAdivina();
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -178,7 +176,7 @@ public class Compuadivina extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Compuadivina().setVisible(true);
-                
+
             }
         });
     }
@@ -189,7 +187,6 @@ public class Compuadivina extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JTextArea txtCompu;

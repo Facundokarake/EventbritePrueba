@@ -15,7 +15,7 @@ import JuegoDeNumeros.Pantallas.Principal;
 public class Main {
 
     public static int numComputadora = (int) (Math.random() * 100 + 1);
-    private static int Intentos=1;
+    private static int Intentos = 1;
 
     public static int getIntentos() {
         return Intentos;
@@ -25,33 +25,24 @@ public class Main {
         Main.Intentos = Intentos;
     }
 
-   
-    
-    
     /**
      * @param args the command line arguments
      */
-    
-
-
     public static void main(String[] args) {
         // TODO code application logic here
         Principal principal = new Principal();
         principal.setVisible(true);
 
-    /**
-     *
-     */
-    
-
-      
-        
+        /**
+         *
+         */
     }
-      public static int reset (){
+
+    public static int reset() {
         numComputadora = (int) (Math.random() * 100 + 1);
         Juego.jButton1.setEnabled(true);
         Juego.txtPersona.setText("");
         return numComputadora;
-        
-        }
+
+    }
 }
