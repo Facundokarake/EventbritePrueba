@@ -32,6 +32,7 @@ public class Principal extends javax.swing.JFrame {
 
         PersonaAdivina = new javax.swing.JToggleButton();
         CompuAdivina = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +50,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,6 +67,10 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(CompuAdivina)
                     .addComponent(PersonaAdivina))
                 .addContainerGap(206, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,7 +79,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(PersonaAdivina)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CompuAdivina)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addGap(49, 49, 49)
+                .addComponent(jButton1)
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         pack();
@@ -88,6 +102,10 @@ public class Principal extends javax.swing.JFrame {
         this.setVisible(false);
         Main.reset();
     }//GEN-LAST:event_PersonaAdivinaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +145,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CompuAdivina;
     private javax.swing.JToggleButton PersonaAdivina;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
 }
