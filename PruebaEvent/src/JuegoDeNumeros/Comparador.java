@@ -16,7 +16,7 @@ public class Comparador {
     private static String mensaje;
     
  // declaro intentos para poder contar los intentos
-    private int Intentos=1;
+   
     
     
     public static String getMensaje() {
@@ -37,7 +37,7 @@ public class Comparador {
             //si es numero verificamos que este entre 0 y 100 y llamamos a la funcion comparar
             
             if (valor >= 0 && valor <= 100) {
-                Juego.txtPersona.append("Intento:"+Intentos +"    "+ texto+"  "+ Comparar(valor)+"\n");
+                Juego.txtPersona.append("Intento:"+Main.getIntentos() +"    "+ texto+"  "+ Comparar(valor)+"\n");
                                 
             } else {
                 
@@ -48,7 +48,7 @@ public class Comparador {
             }
 
         } catch (NumberFormatException e) {
-            mensaje = texto + "  no es un numero";
+            mensaje = "("+ texto + ")" + " no es un numero";
             // muestra el mensaje por pantalla
             Mensajes mens = new Mensajes();
             mens.setVisible(true);
@@ -61,7 +61,7 @@ public class Comparador {
     
     public String Comparar(int hum) {
         //aumenta el acumulador de intentos
-        Intentos = Intentos + 1;
+        Main.setIntentos(Main.getIntentos() + 1);
         
         System.out.println(Main.numComputadora);
         if (Main.numComputadora > hum)
@@ -73,8 +73,9 @@ public class Comparador {
             return "es mayor que el numero a adivinar";
         }
         Juego.jButton1.setEnabled(false);
-        return "\n Ganaste fiera,tifon,torbellino,maquina,crack" + "\n" + "En tu intento  " + Intentos;
-
+        return "Ganaste genio,torbellino,maquina,crack" + "\n" + "En tu intento numero " + (Main.getIntentos()-1);
+ 
+        
     }
 
 }

@@ -33,56 +33,56 @@ public class Principal extends javax.swing.JFrame {
         PersonaAdivina = new javax.swing.JToggleButton();
         CompuAdivina = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Juego Adivinar");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PersonaAdivina.setText("persona adivina");
+        PersonaAdivina.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
+        PersonaAdivina.setForeground(new java.awt.Color(153, 0, 153));
+        PersonaAdivina.setText("Persona Adivina");
+        PersonaAdivina.setActionCommand("Persona \nAdivina");
+        PersonaAdivina.setName(""); // NOI18N
         PersonaAdivina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaAdivinaActionPerformed(evt);
             }
         });
+        getContentPane().add(PersonaAdivina, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 190, 50));
+        PersonaAdivina.getAccessibleContext().setAccessibleDescription("");
 
-        CompuAdivina.setText("Compu adivina");
+        CompuAdivina.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
+        CompuAdivina.setForeground(new java.awt.Color(153, 0, 153));
+        CompuAdivina.setText("Computadora Adivina");
+        CompuAdivina.setMaximumSize(new java.awt.Dimension(131, 25));
+        CompuAdivina.setMinimumSize(new java.awt.Dimension(131, 25));
+        CompuAdivina.setPreferredSize(new java.awt.Dimension(131, 25));
         CompuAdivina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CompuAdivinaActionPerformed(evt);
             }
         });
+        getContentPane().add(CompuAdivina, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 210, 50));
 
+        jButton1.setFont(new java.awt.Font("Imprint MT Shadow", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 0, 255));
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 90, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CompuAdivina)
-                    .addComponent(PersonaAdivina))
-                .addContainerGap(206, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(95, 95, 95))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(PersonaAdivina)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CompuAdivina)
-                .addGap(49, 49, 49)
-                .addComponent(jButton1)
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Imprint MT Shadow", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 0, 204));
+        jLabel2.setText("Bienvenido!!!");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 310, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/81a7596f677c05990584afb0d275416e-gradiente-de-fondo-futurista.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 550, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,6 +146,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton CompuAdivina;
     private javax.swing.JToggleButton PersonaAdivina;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
 }

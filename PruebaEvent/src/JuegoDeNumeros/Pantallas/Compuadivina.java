@@ -29,6 +29,7 @@ public class Compuadivina extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         Mas = new javax.swing.JButton();
         Menos = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -36,88 +37,75 @@ public class Compuadivina extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtCompu = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/81a7596f677c05990584afb0d275416e-gradiente-de-fondo-futurista.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("JuegoAdivinar");
+        setTitle("Juego Adivinar");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Mas.setText("Mi numero es mas grande");
+        Mas.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
+        Mas.setForeground(new java.awt.Color(153, 0, 153));
+        Mas.setText("Mayor");
         Mas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MasActionPerformed(evt);
             }
         });
+        getContentPane().add(Mas, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 120, 100));
 
-        Menos.setText("Mi numero es mas chico");
+        Menos.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
+        Menos.setForeground(new java.awt.Color(153, 0, 153));
+        Menos.setText("Menor");
         Menos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenosActionPerformed(evt);
             }
         });
+        getContentPane().add(Menos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 120, 100));
 
-        jButton3.setText("Siiii es ese!");
+        jButton3.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(153, 0, 153));
+        jButton3.setText("¡Siiii es ese!");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 123, 52));
 
+        jButton4.setFont(new java.awt.Font("Imprint MT Shadow", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(102, 0, 102));
         jButton4.setText("Volver");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
 
         txtCompu.setColumns(20);
+        txtCompu.setFont(new java.awt.Font("Imprint MT Shadow", 0, 14)); // NOI18N
+        txtCompu.setForeground(new java.awt.Color(153, 0, 153));
         txtCompu.setRows(5);
         txtCompu.setText("¿Tu numero es "+compu.getNumCompu()+"?\n");
         jScrollPane1.setViewportView(txtCompu);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 230, 260));
+
+        jButton1.setFont(new java.awt.Font("Imprint MT Shadow", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 0, 102));
         jButton1.setText("Reiniciar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addGap(36, 36, 36))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(Menos, javax.swing.GroupLayout.PREFERRED_SIZE, 108, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(Mas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(197, 197, 197)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Menos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Mas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1)))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/81a7596f677c05990584afb0d275416e-gradiente-de-fondo-futurista.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 580, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,6 +189,8 @@ public class Compuadivina extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JTextArea txtCompu;
     // End of variables declaration//GEN-END:variables

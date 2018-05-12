@@ -33,41 +33,28 @@ public class MensajesCompuAdivina extends javax.swing.JFrame {
 
         FelicitacionesCompu = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Juego Adivinar");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        FelicitacionesCompu.setFont(new java.awt.Font("Imprint MT Shadow", 0, 18)); // NOI18N
         FelicitacionesCompu.setText("Felicitaciones");
+        getContentPane().add(FelicitacionesCompu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
+        jButton1.setFont(new java.awt.Font("Imprint MT Shadow", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 0, 204));
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(FelicitacionesCompu))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(jButton1)))
-                .addContainerGap(179, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(FelicitacionesCompu)
-                .addGap(28, 28, 28)
-                .addComponent(jButton1)
-                .addContainerGap(153, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/81a7596f677c05990584afb0d275416e-gradiente-de-fondo-futurista.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -30, 430, 280));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,5 +101,6 @@ public class MensajesCompuAdivina extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel FelicitacionesCompu;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
